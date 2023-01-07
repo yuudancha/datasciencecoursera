@@ -1,2 +1,50 @@
+---
+title: "Readme.rmd for Coursera > Johns Hopkins > Course: Getting & Cleaning Data > Week 4 Programming Assignment"
+author: "Dan Charlson"
+date: "January 6, 2023"
+output: pdf_document
+---
+
 ## Introduction
-This is a placeholder.
+
+This Readme addresses the objective of this project, which is required for the completion of the Week 4 of the Johns Hopkins University Data Science Specialization Course #3: "Getting and Cleaning Data," offered via Coursera.
+
+Course URL: [link](https://www.coursera.org/learn/data-cleaning/home/welcome)
+
+See Week 4 - Course Project for details.
+
+## Objective
+
+Demonstrate and apply the skill of creating a "tidy" data set (from one that is not). For this objective, the assignment included the provision of a data source: Smartphone accelerometer measurement data related to a study about Human Activity Recognition from 2012.
+
+URL: [link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+
+## Review Criteria
+
+These were provided as part of the Programming Assignment:
+1. The submitted data set is tidy. 
+2. The Github repo contains the required scripts.
+3. GitHub contains a code book that modifies and updates the available codebooks with the data to indicate all the variables and summaries calculated, along with units, and any other relevant information.
+4. The README that explains the analysis files is clear and understandable.
+5. The work submitted for this project is the work of the student who submitted it.
+
+## What is "tidy data?"
+
+Summary:
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+Source URL: [link](http://vita.had.co.nz/papers/tidy-data.pdf)
+Specifically, page four.
+
+## Files Included
+
+Please find the following files as part of this project submission:
+
+* README.Rmd - this file
+* CodeBook.Rmd - more detailed discussion of processes and transformations
+* run_analysis.R - the actual script that performs the tidying AND generates a second tidy set with averages
+* The output aka resulting tidied data set from the execution of the run_analysis.R file; it will be called "merged_and_tidied_data.txt"
+
+End of file

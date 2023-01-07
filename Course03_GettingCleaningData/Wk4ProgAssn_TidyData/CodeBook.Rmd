@@ -1,0 +1,51 @@
+---
+title: "CodeBook.Rmd for Coursera > Johns Hopkins > Course: Getting & Cleaning Data > Week 4 Programming Assignment"
+author: "Dan Charlson"
+date: "January 6, 2023"
+output: pdf_document
+---
+
+## Introduction
+
+First please read the Readme.Rmd found in this directory/project.
+
+## Requirements
+
+Using the data set provided (and mentioned in the Readme), the script will perform the following steps:
+
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the **mean** and **standard** deviation for each measurement. (My emphasis added.)
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names. 
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Discussion
+
+High level concerns...
+1. The data set files are divided 70/30 between training data and test data; these need to be merged.
+2. Subjects vs. activities vs. measurements are stored more like a relational database. To make it tidy, these different sets and arrangements of data need to be joined together in one table so that each row is One Subject and One Activity and the corresponding (long list of) measurements for that activity.
+
+## Guide to the Input Data Set
+
+For thorough and comprehensive discussion of the Data Set, please be sure to visit the [original project link](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+In a nutshell, it was a study that compiled numerous measurements from smartphone accelerometers for six "daily life" activities (such as WALKING), performed by 30 human subjects.
+
+The link to the data itself is here:
+[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
+## Assumptions
+
+The run_analysis.R script assumes that:
+1. You have created a project working directory.
+2. You have already downloaded the provided Zip archive and expanded it into the project working directory
+3. You are running the run_analysis.R script in the project working directory; i.e., the unzipped data is in a directory at the same level as the script.
+
+For completeness, here is some sample code that can be used to download and decompress the data:
+
+CODE
+url <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(url, file.path(path, "dataFiles.zip"))
+unzip(zipfile = "dataFiles.zip")
+/CODE
+End of file.
